@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-plus-jakarta: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-cormorant: 'Cormorant Garamond', Georgia, serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-plus-jakarta);
+  background-color: #FFF0F4;
+  color: #2E121E;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom Dantene Font Support */
+@font-face {
+  font-family: 'Dantene';
+  src: url('/fonts/Dantene.otf') format('opentype'),
+       url('/fonts/Dantene.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-dantene {
+  font-family: 'Dantene', var(--font-cormorant), Georgia, serif;
+}
+
+/* Custom smooth text-rendering */
+.font-brand-logo {
+  font-family: 'Cinzel', 'Playfair Display', Georgia, serif;
+  letter-spacing: 0.18em;
+}
+
+/* Keyframe animations for floating elements */
+@keyframes float1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-10deg);
+  }
+}
+
+@keyframes float2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(10deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(10deg);
+  }
+}
+
+.animate-float-badge-1 {
+  animation: float1 3.2s ease-in-out infinite;
+}
+
+.animate-float-badge-2 {
+  animation: float2 3.8s ease-in-out infinite 0.6s;
+}
+
+/* Subtle glassmorphism */
+.glass-pill {
+  background: rgba(255, 255, 255, 0.45);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 4px 20px -2px rgba(22, 49, 77, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.6);
+}
