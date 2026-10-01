@@ -81,7 +81,7 @@ export default function AlamatSection() {
                         Alamat Lengkap
                       </span>
                       <p className="text-xs sm:text-sm text-[#2E121E]/80 font-bold mt-1 leading-relaxed">
-                        Jalan Tritura NO 14 Samping Toko Elvis
+                        Jl. Tritura Kamali Pentalluan
                       </p>
                       <p className="text-xs text-[#E83D68] font-bold mt-2 flex items-center gap-1.5">
                       </p>
