@@ -43,12 +43,12 @@ const config: Config = {
       },
       keyframes: {
         floatBadge1: {
-          "0%, 100%": { transform: "translateY(0px) rotate(-10deg)" },
-          "50%": { transform: "translateY(-10px) rotate(-10deg)" },
+          "0%, 100%": { transform: "translate3d(0, 0px, 0) rotate(-10deg)" },
+          "50%": { transform: "translate3d(0, -10px, 0) rotate(-10deg)" },
         },
         floatBadge2: {
-          "0%, 100%": { transform: "translateY(0px) rotate(10deg)" },
-          "50%": { transform: "translateY(-12px) rotate(10deg)" },
+          "0%, 100%": { transform: "translate3d(0, 0px, 0) rotate(10deg)" },
+          "50%": { transform: "translate3d(0, -12px, 0) rotate(10deg)" },
         },
       },
     },

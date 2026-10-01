@@ -56,7 +56,7 @@ const InstagramCard = ({ post }: { post: any }) => {
       href={post.link || "#"}
       target="_blank"
       rel="noopener noreferrer"
-      className="group relative bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(255,126,156,0.12)] border border-pink-100/70 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_16px_36px_rgba(255,126,156,0.22)] flex flex-col block"
+      className="group relative bg-white rounded-3xl overflow-hidden shadow-[0_10px_30px_rgba(255,126,156,0.12)] border border-pink-100/70 transition-shadow duration-300 hover:shadow-[0_16px_36px_rgba(255,126,156,0.22)] flex flex-col block"
     >
       <div className="relative aspect-square w-full overflow-hidden bg-[#FFF0F4]">
         <Image
@@ -64,9 +64,9 @@ const InstagramCard = ({ post }: { post: any }) => {
           alt={post.caption}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-          className="object-cover transition-transform duration-500 group-hover:scale-105"
+          className="object-cover transition-transform duration-500 will-change-transform group-hover:scale-[1.03]"
         />
-        <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#FF7E9C] text-[10px] font-extrabold tracking-wider shadow-xs z-20">
+        <div className="absolute top-3 left-3 px-2.5 py-1 rounded-full bg-white/90 text-[#FF7E9C] text-[10px] font-extrabold tracking-wider shadow-xs z-20">
           {post.tag}
         </div>
 
@@ -212,14 +212,14 @@ export default function SocialMediaSection() {
       className="relative py-16 sm:py-24 overflow-hidden bg-gradient-to-b from-[#FFF0F4] via-white to-[#FFF5F8] scroll-mt-16"
     >
       {/* Ambient background glows */}
-      <div className="absolute top-1/4 -left-24 w-96 h-96 bg-[#FF7E9C]/15 rounded-full blur-[100px] pointer-events-none" />
-      <div className="absolute bottom-10 -right-24 w-96 h-96 bg-[#A8C5E8]/20 rounded-full blur-[100px] pointer-events-none" />
+      <div className="ambient-glow absolute top-1/4 -left-24 w-96 h-96 bg-[#FF7E9C]/15 rounded-full blur-[60px] pointer-events-none" />
+      <div className="ambient-glow absolute bottom-10 -right-24 w-96 h-96 bg-[#A8C5E8]/20 rounded-full blur-[60px] pointer-events-none" />
 
       <motion.div
-        initial={{ opacity: 0, y: 50 }}
+        initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, margin: "-100px" }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.5, ease: "easeOut" }}
         className="max-w-[1320px] mx-auto px-5 sm:px-8 md:px-12 relative z-10"
       >
         {/* Header Section */}
@@ -275,7 +275,7 @@ export default function SocialMediaSection() {
                 draggable={false}
                 className="flex flex-col items-center space-y-2.5 snap-center group flex-shrink-0"
               >
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-[3px] bg-gradient-to-tr from-[#FD5949] via-[#D6249F] to-[#285AEB] group-hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full p-[3px] bg-gradient-to-tr from-[#FD5949] via-[#D6249F] to-[#285AEB] transition-transform duration-300 will-change-transform group-hover:scale-105">
                   <div className="w-full h-full rounded-full border-2 border-white overflow-hidden relative bg-white">
                     <Image
                       src={highlight.image}
@@ -303,8 +303,8 @@ export default function SocialMediaSection() {
         {/* TikTok Profile */}
         <div className="mb-16">
           <div className="relative overflow-hidden max-w-3xl mx-auto rounded-3xl border border-[#2E121E]/10 bg-white p-7 sm:p-9 shadow-[0_12px_32px_rgba(46,18,30,0.1)]">
-            <div className="absolute -top-20 -right-16 w-48 h-48 rounded-full bg-[#25F4EE]/25 blur-3xl pointer-events-none" />
-            <div className="absolute -bottom-20 -left-12 w-48 h-48 rounded-full bg-[#FE2C55]/20 blur-3xl pointer-events-none" />
+            <div className="ambient-glow absolute -top-20 -right-16 w-48 h-48 rounded-full bg-[#25F4EE]/25 blur-2xl pointer-events-none" />
+            <div className="ambient-glow absolute -bottom-20 -left-12 w-48 h-48 rounded-full bg-[#FE2C55]/20 blur-2xl pointer-events-none" />
 
             <div className="relative flex flex-col sm:flex-row sm:items-center justify-between gap-6">
               <div className="flex items-center gap-4">

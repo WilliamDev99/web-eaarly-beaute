@@ -75,7 +75,7 @@ export default function StoreGallery() {
                 alt={item.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                className="object-cover transition-transform duration-700 will-change-transform group-hover:scale-[1.03]"
               />
 
               {/* Gradient Overlay */}
@@ -83,11 +83,11 @@ export default function StoreGallery() {
 
               {/* Top Category Badge & Expand Icon */}
               <div className="absolute top-4 left-4 right-4 flex items-center justify-between">
-                <span className="px-3 py-1 rounded-full bg-white/90 backdrop-blur-md text-[#2E121E] text-xs font-bold tracking-wide shadow-xs">
+                <span className="px-3 py-1 rounded-full bg-white/90 text-[#2E121E] text-xs font-bold tracking-wide shadow-xs">
                   {item.category}
                 </span>
 
-                <div className="w-8 h-8 rounded-full bg-white/80 backdrop-blur-md text-[#2E121E] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                <div className="w-8 h-8 rounded-full bg-white/80 text-[#2E121E] flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
                   <Maximize2 className="w-4 h-4" />
                 </div>
               </div>
@@ -116,7 +116,7 @@ export default function StoreGallery() {
       {/* Lightbox Photo Modal */}
       {activePhoto && (
         <div
-          className="fixed inset-0 z-50 bg-[#2E121E]/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-[#2E121E]/92 flex items-center justify-center p-4 sm:p-6"
           onClick={() => setActivePhoto(null)}
         >
           <div

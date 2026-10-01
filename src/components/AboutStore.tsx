@@ -8,8 +8,8 @@ export default function AboutStore() {
   return (
     <section id="tentang" className="relative py-20 sm:py-28 bg-[#FFF9FA] overflow-hidden">
       {/* Decorative background glows */}
-      <div className="absolute top-10 right-0 w-96 h-96 bg-[#FF7E9C]/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 left-0 w-96 h-96 bg-[#A8C5E8]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="ambient-glow absolute top-10 right-0 w-96 h-96 bg-[#FF7E9C]/10 rounded-full blur-2xl pointer-events-none" />
+      <div className="ambient-glow absolute bottom-10 left-0 w-96 h-96 bg-[#A8C5E8]/15 rounded-full blur-2xl pointer-events-none" />
 
       <div className="max-w-[1280px] mx-auto px-5 sm:px-8 md:px-12 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">

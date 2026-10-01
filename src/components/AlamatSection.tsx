@@ -24,15 +24,11 @@ export default function AlamatSection() {
     >
       {/* Soft Radiant Ambient Glows */}
       <div
-        className="absolute -top-24 -left-24 w-[550px] h-[550px] bg-white/50 rounded-full blur-[100px] pointer-events-none"
+        className="ambient-glow absolute -top-24 -left-24 w-[550px] h-[550px] bg-white/50 rounded-full blur-[60px] pointer-events-none"
         aria-hidden="true"
       />
       <div
-        className="absolute -bottom-24 -right-24 w-[600px] h-[600px] bg-[#FF7E9C]/20 rounded-full blur-[110px] pointer-events-none"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute top-1/3 right-[10%] w-[450px] h-[450px] bg-white/35 rounded-full blur-[95px] pointer-events-none"
+        className="ambient-glow absolute -bottom-24 -right-24 w-[600px] h-[600px] bg-[#FF7E9C]/20 rounded-full blur-[70px] pointer-events-none"
         aria-hidden="true"
       />
 
@@ -54,10 +50,10 @@ export default function AlamatSection() {
           {/* White Showcase Card Container */}
           <div className="relative bg-white shadow-[0_24px_70px_rgba(232,61,104,0.10)] border border-white/90 p-8 sm:p-12 md:p-14 lg:p-16 xl:p-20 overflow-hidden rounded-[40px]">
             <motion.div 
-              initial={{ opacity: 0, y: 50 }}
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-100px" }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              viewport={{ once: true, margin: "-80px" }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
               className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 xl:gap-16 items-start"
             >
               
@@ -183,7 +179,7 @@ export default function AlamatSection() {
       {/* Lightbox Modal */}
       {lightboxPhoto && (
         <div
-          className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 sm:p-6"
           onClick={() => setLightboxPhoto(null)}
         >
           <div

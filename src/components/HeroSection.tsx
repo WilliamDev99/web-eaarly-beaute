@@ -14,17 +14,13 @@ export default function HeroSection() {
       {/* 1. Sticky Transparent Top Navbar */}
       <Navbar theme="pink" />
 
-      {/* Subtle Ambient Background Depth (Moved to corners so center stays crisp & high-contrast) */}
+      {/* Subtle Ambient Background Depth — reduced blur for iOS perf */}
       <div
-        className="absolute -top-16 -left-16 w-[550px] h-[550px] bg-white/40 rounded-full blur-[100px] pointer-events-none z-0"
+        className="ambient-glow absolute -top-16 -left-16 w-[550px] h-[550px] bg-white/40 rounded-full blur-[60px] pointer-events-none z-0"
         aria-hidden="true"
       />
       <div
-        className="absolute -bottom-16 -right-16 w-[600px] h-[600px] bg-[#FF7E9C]/18 rounded-full blur-[110px] pointer-events-none z-0"
-        aria-hidden="true"
-      />
-      <div
-        className="absolute top-1/3 right-[10%] w-[400px] h-[400px] bg-white/30 rounded-full blur-[90px] pointer-events-none z-0"
+        className="ambient-glow absolute -bottom-16 -right-16 w-[600px] h-[600px] bg-[#FF7E9C]/18 rounded-full blur-[70px] pointer-events-none z-0"
         aria-hidden="true"
       />
 
@@ -38,16 +34,16 @@ export default function HeroSection() {
             height={1090}
             priority
             quality={100}
-            className="w-full h-auto object-contain drop-shadow-[0_12px_28px_rgba(235,60,105,0.26)] drop-shadow-[0_2px_6px_rgba(74,24,40,0.14)] select-none"
+            className="w-full h-auto object-contain drop-shadow-[0_8px_20px_rgba(235,60,105,0.20)] select-none"
           />
         </div>
       </div>
 
-      {/* 3. Bouncing Scroll Indicator */}
-      <div className="absolute bottom-8 left-0 right-0 w-full z-20 flex justify-center animate-bounce">
+      {/* 3. Scroll Indicator — simpler opacity pulse instead of heavy bounce */}
+      <div className="absolute bottom-8 left-0 right-0 w-full z-20 flex justify-center animate-bounce" style={{ willChange: 'transform' }}>
         <a 
           href="#tentang-kami"
-          className="text-[#E83D68]/80 hover:text-[#E83D68] transition-colors p-2 rounded-full hover:bg-white/40 backdrop-blur-sm"
+          className="text-[#E83D68]/80 hover:text-[#E83D68] transition-colors p-2 rounded-full hover:bg-white/40"
           aria-label="Scroll ke bawah"
         >
           <ChevronDown className="w-8 h-8 stroke-[2.5]" />

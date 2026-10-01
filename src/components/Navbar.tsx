@@ -134,10 +134,10 @@ export default function Navbar({ theme = "pink" }: NavbarProps) {
         >
           {/* Clipped Frosted Glass Background with Backdrop Blur */}
           <div
-            className={`absolute inset-0 backdrop-blur-md transition-colors duration-300 ${
+            className={`absolute inset-0 backdrop-blur-sm transition-colors duration-300 ${
               isPink
-                ? "bg-gradient-to-b from-white/94 via-white/86 to-[#FFF0F5]/80"
-                : "bg-gradient-to-b from-white/92 via-white/82 to-[#B9DEF2]/75"
+                ? "bg-gradient-to-b from-white/96 via-white/90 to-[#FFF0F5]/85"
+                : "bg-gradient-to-b from-white/94 via-white/86 to-[#B9DEF2]/80"
             }`}
             style={{
               clipPath: "url(#navbarTabClip)",
@@ -220,7 +220,7 @@ export default function Navbar({ theme = "pink" }: NavbarProps) {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2.5 rounded-full bg-white/80 backdrop-blur-md border border-white/80 text-[#2E121E] shadow-sm hover:bg-white transition-all focus:outline-none"
+            className="md:hidden p-2.5 rounded-full bg-white/90 border border-white/80 text-[#2E121E] shadow-sm hover:bg-white transition-colors focus:outline-none"
             aria-label="Toggle Navigation Menu"
             aria-expanded={mobileMenuOpen}
           >
@@ -232,7 +232,7 @@ export default function Navbar({ theme = "pink" }: NavbarProps) {
       {/* Mobile Menu Dropdown Drawer */}
       {mobileMenuOpen && (
         <div className="md:hidden px-6 pt-2 pb-6">
-          <div className="bg-white/95 backdrop-blur-xl border border-pink-100/80 rounded-2xl shadow-xl p-5 flex flex-col space-y-4 animate-in fade-in slide-in-from-top-3 duration-200 text-[#2E121E]">
+          <div className="bg-white/97 border border-pink-100/80 rounded-2xl shadow-xl p-5 flex flex-col space-y-4 text-[#2E121E]">
             <ul className="flex flex-col space-y-3 text-sm font-medium tracking-wide uppercase font-sans">
               {navLinks.map((item) => {
                 const isActive = isLinkActive(item);
